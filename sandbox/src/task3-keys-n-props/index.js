@@ -5,5 +5,14 @@
  * @returns {Object} Объект с количеством вхождений типов
  */
 export const solutionFn = (obj) => {
-    // Ваш код здесь
+    const typeCounts = {};
+
+    for (const key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            const type = typeof obj[key];
+            typeCounts[type] = (typeCounts[type] || 0) + 1;
+        }
+    }
+
+    return typeCounts;
 };

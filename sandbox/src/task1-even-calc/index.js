@@ -5,5 +5,7 @@
  * @returns {number} Сумма чётных чисел
  */
 export const solutionFn = (numbers) => {
-    // Ваш код здесь
+    return numbers.reduce((sum, num) => {
+        return num % 2 === 0 ? sum + num : sum;
+    }, 0);
 };
